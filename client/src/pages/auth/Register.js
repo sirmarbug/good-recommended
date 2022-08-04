@@ -1,9 +1,12 @@
 import {Component} from "react";
+import AuthLayout from "../../layouts/AuthLayout";
 
 class Register extends Component {
     render() {
         return (
-            <h1>Widok rejestracji</h1>
+            <AuthLayout>
+                <h1>Widok rejestracji</h1>
+            </AuthLayout>
         )
     }
 }

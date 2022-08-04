@@ -18,3 +18,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+
+}

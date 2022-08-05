@@ -1,5 +1,5 @@
 import {Component} from "react";
-import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Dashboard from "./pages/dashboard/Dashboard";
@@ -14,35 +14,6 @@ class App extends Component {
     return (
         <BrowserRouter>
             <div className="app">
-                <nav>
-                    <ul>
-                        <li>
-                            <NavLink className="link" to="/login">Logowanie</NavLink>
-                        </li>
-                        <li>
-                            <NavLink className="link" to="/register">Rejstracja</NavLink>
-                        </li>
-                        <li>
-                            <NavLink className="link" to="/dashboard">Dashboard</NavLink>
-                        </li>
-                        {/*<li>*/}
-                        {/*    <NavLink className="link" to="/movies">Filmy</NavLink>*/}
-                        {/*</li>*/}
-                        {/*<li>*/}
-                        {/*    <NavLink className="link" to="/series">Seriale</NavLink>*/}
-                        {/*</li>*/}
-                        {/*<li>*/}
-                        {/*    <NavLink className="link" to="/boooks">Książki</NavLink>*/}
-                        {/*</li>*/}
-                        <li>
-                            <NavLink className="link" to="/recommend/123">Szczegóły</NavLink>
-                        </li>
-                        {/*<li>*/}
-                        {/*    <NavLink className="link" to="/recommend/123/edit">Edycja</NavLink>*/}
-                        {/*</li>*/}
-                    </ul>
-                </nav>
-
                 <Switch>
                     <Route path="/login" component={Login}/>
                     <Route path="/register" component={Register}/>

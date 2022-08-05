@@ -1,5 +1,6 @@
 import {Component} from "react";
 import styled from "styled-components";
+import Title from "../components/typography/Title";
 
 const WrapperAuthLayout = styled.div`
   display: flex;
@@ -8,7 +9,7 @@ const WrapperAuthLayout = styled.div`
   align-items: center;
   text-align: center;
   width: 100%;
-  min-height: calc(100vh - 23px);
+  min-height: 100vh;
 `
 
 const WrapperAuthLayoutContent = styled.div`
@@ -18,14 +19,20 @@ const WrapperAuthLayoutContent = styled.div`
   align-items: center;
   width: 30%;
   height: 100%;
+  border-radius: .5rem;
+  background: #273444;
+  color: #ebf0fc;
+  padding: 2rem;
 `
 
 class AuthLayout extends Component {
     render() {
+        const { children } = this.props
         return (
             <WrapperAuthLayout>
                 <WrapperAuthLayoutContent>
-                    {this.props.children}
+                    <Title>Good Recommend</Title>
+                    {children}
                 </WrapperAuthLayoutContent>
             </WrapperAuthLayout>
         )

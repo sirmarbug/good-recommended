@@ -1,6 +1,5 @@
 import {Component} from "react";
 import {NavLink} from "react-router-dom";
-import TextButton from "../../components/buttons/TextButton";
 import styled from "styled-components";
 
 const Nav = styled.nav`
@@ -16,7 +15,7 @@ class DashboardLayoutNavigation extends Component{
                 <Nav>
                     <ul>
                         <li>
-                            <NavLink className="link" to="/dashboard">Dashboard</NavLink>
+                            <NavLink className="link" to="/dashboard">GoodRecommend</NavLink>
                         </li>
                         <li>
                             <NavLink className="link" to="/movies">Filmy</NavLink>
@@ -34,7 +33,7 @@ class DashboardLayoutNavigation extends Component{
                             <NavLink className="link" to="/recommend/123/edit">Edycja</NavLink>
                         </li>
                         <li>
-                            <TextButton to="/login">Wyloguj</TextButton>
+                            <NavLink className="link" to="/login">Wyloguj</NavLink>
                         </li>
                     </ul>
                 </Nav>

@@ -11,6 +11,19 @@ const WrapperDashboardLayout = styled.div`
   min-height: 100vh;
 `
 
+const WrapperDashboardLayoutContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+`
+
+const WrapperDashboardLayoutContent = styled.div`
+  width: 60%;
+  height: 100%;
+  text-align: center;
+`
+
 class DashboardLayout extends Component {
     render() {
         const { children } = this.props
@@ -18,7 +31,11 @@ class DashboardLayout extends Component {
         return (
             <WrapperDashboardLayout>
                 <DashboardLayoutNavigation/>
-                {children}
+                <WrapperDashboardLayoutContainer>
+                    <WrapperDashboardLayoutContent>
+                        {children}
+                    </WrapperDashboardLayoutContent>
+                </WrapperDashboardLayoutContainer>
                 <DashboardLayoutFooter/>
             </WrapperDashboardLayout>
         )

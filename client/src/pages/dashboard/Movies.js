@@ -1,11 +1,12 @@
 import {Component} from "react";
+import DashboardLayout from "../../layouts/DashboardLayout/DashboardLayout";
 
 class Movies extends Component {
     render() {
         return (
-            <div className="dashboard">
+            <DashboardLayout>
                 <h1>Widok filmów</h1>
-            </div>
+            </DashboardLayout>
         )
     }
 }

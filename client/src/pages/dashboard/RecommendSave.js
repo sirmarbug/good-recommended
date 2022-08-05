@@ -1,11 +1,12 @@
 import {Component} from "react";
+import DashboardLayout from "../../layouts/DashboardLayout/DashboardLayout";
 
 class RecommendSave extends Component {
     render() {
         return (
-            <div className="dashboard">
+            <DashboardLayout>
                 <h1>RecommendSave</h1>
-            </div>
+            </DashboardLayout>
         )
     }
 }

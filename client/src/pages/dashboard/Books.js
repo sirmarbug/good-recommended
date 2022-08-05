@@ -1,11 +1,12 @@
 import {Component} from "react";
+import DashboardLayout from "../../layouts/DashboardLayout/DashboardLayout";
 
 class Books extends Component {
     render() {
         return (
-            <div className="dashboard">
+            <DashboardLayout>
                 <h1>Widok książek</h1>
-            </div>
+            </DashboardLayout>
         )
     }
 }

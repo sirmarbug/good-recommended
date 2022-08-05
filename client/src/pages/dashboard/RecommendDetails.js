@@ -1,4 +1,5 @@
 import {Component} from "react";
+import DashboardLayout from "../../layouts/DashboardLayout/DashboardLayout";
 
 class RecommendDetails extends Component {
     goToHome = () => {
@@ -9,9 +10,9 @@ class RecommendDetails extends Component {
         console.log(this.props)
         const { id } = this.props.match.params
         return (
-            <div className="dashboard" onClick={this.goToHome}>
-                <h1>RecommendDetails: {id}</h1>
-            </div>
+            <DashboardLayout>
+                <h1 onClick={this.goToHome}>RecommendDetails: {id}</h1>
+            </DashboardLayout>
         )
     }
 }

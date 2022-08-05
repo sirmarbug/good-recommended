@@ -23,6 +23,7 @@ const WrapperAuthLayoutContent = styled.div`
   background: #273444;
   color: #ebf0fc;
   padding: 2rem;
+  margin: 2rem 0;
 `
 
 class AuthLayout extends Component {

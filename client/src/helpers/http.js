@@ -25,6 +25,15 @@ http.interceptors.response.use(
     }
 )
 
+export const getAll = async (uri) => {
+    try {
+        const response = await http.get(uri)
+        return response
+    } catch (e) {
+        console.error(e)
+    }
+}
+
 export const post = async (uri, data) => {
     try {
         const response = await http.post(uri, data)

@@ -36,7 +36,7 @@ class Login extends Component {
                         <MyForm>
                             <InputGroup>
                                 <Label>Adres E-mail</Label>
-                                <TextInput type="email" name="email" />
+                                <TextInput type="text" name="email" />
                                 <MyErrorMessage name="email" component="div" />
                             </InputGroup>
                             <InputGroup>

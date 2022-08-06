@@ -5,6 +5,7 @@ const InputGroup = styled.div`
   flex-direction: column;
   align-items: start;
   width: 100%;
+  margin-bottom: 1.5rem;
 `
 
 export default InputGroup

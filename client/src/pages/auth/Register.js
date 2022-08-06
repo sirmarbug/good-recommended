@@ -6,9 +6,17 @@ import InputGroup from "../../components/forms/InputGroup";
 import Label from "../../components/typography/Label";
 import TextInput from "../../components/forms/TextInput";
 import Button from "../../components/buttons/Button";
+import {register} from "../../api/auth";
 
 class Register extends Component {
-    register = () => {}
+    register = async () => {
+        await register({
+            "firstName": "Mariusz",
+            "lastName": "Bugajski",
+            "email": "sirmarbug+u2@gmail.com",
+            "password": "zaq12wsx"
+        })
+    }
 
     render() {
         return (

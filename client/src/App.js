@@ -21,7 +21,8 @@ class App extends Component {
                     <Route path="/movies" component={Movies}/>
                     <Route path="/series" component={Series}/>
                     <Route path="/books" component={Books}/>
-                    <Route exact path="/recommend/:id" component={RecommendDetails}/>
+                    <Route exact path="/recommend/details/:id" component={RecommendDetails}/>
+                    <Route exact path="/recommend/new" component={RecommendSave}/>
                     <Route exact path="/recommend/:id/edit" component={RecommendSave}/>
                 </Switch>
             </div>

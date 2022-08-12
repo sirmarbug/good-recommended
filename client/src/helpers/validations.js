@@ -20,3 +20,11 @@ export const registerValidationSchema = new Yup.ObjectSchema({
         .required('Hasło jest wymagane')
         .oneOf([Yup.ref('password'), null], 'Hasła muszą być takie same')
 })
+
+export const recommendValidationSchema = new Yup.ObjectSchema({
+    type: Yup.number(),
+    name: Yup.string()
+        .required('Nazwa jest wymagana'),
+    description: Yup.string(),
+    rating: Yup.number()
+})

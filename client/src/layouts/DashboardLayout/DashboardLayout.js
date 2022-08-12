@@ -19,9 +19,8 @@ const WrapperDashboardLayoutContainer = styled.div`
 `
 
 const WrapperDashboardLayoutContent = styled.div`
-  width: 60%;
+  width: 80%;
   height: 100%;
-  text-align: center;
 `
 
 class DashboardLayout extends Component {

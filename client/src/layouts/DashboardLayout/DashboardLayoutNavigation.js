@@ -27,10 +27,13 @@ class DashboardLayoutNavigation extends Component{
                             <NavLink className="link" to="/books">Książki</NavLink>
                         </li>
                         <li>
-                            <NavLink className="link" to="/recommend/123">Szczegóły</NavLink>
+                            <NavLink className="link" to="/recommend/details/123">Szczegóły</NavLink>
                         </li>
                         <li>
                             <NavLink className="link" to="/recommend/123/edit">Edycja</NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="link" to="/recommend/new">Dodaj</NavLink>
                         </li>
                         <li>
                             <NavLink className="link" to="/login">Wyloguj</NavLink>

@@ -18,7 +18,7 @@ class Dashboard extends Component {
             <DashboardLayout>
                 <h1>Wszystkie rekomendacje</h1>
                 {this.state.recommends && this.state.recommends.total > 0 && this.state.recommends.items.map(recommend => (
-                    <p key={recommend._id}>{recommend.type} | {recommend.name} | {recommend.description} | {recommend.rating}</p>
+                    <p key={recommend._id}>{recommend._id} | {recommend.type} | {recommend.name} | {recommend.description} | {recommend.rating}</p>
                 ))}
             </DashboardLayout>
         )

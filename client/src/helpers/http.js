@@ -42,3 +42,12 @@ export const post = async (uri, data) => {
         console.error(e)
     }
 }
+
+export const remove = async (uri) => {
+    try {
+        const response = await http.delete(uri)
+        return response
+    } catch (e) {
+        console.error(e)
+    }
+}

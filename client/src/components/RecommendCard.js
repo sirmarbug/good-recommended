@@ -29,7 +29,6 @@ class RecommendCard extends Component {
             <RecommendCardWrapper>
                 <Subtitle>{recommend.name}</Subtitle>
                 <p>{convertTypeToString(recommend.type)}</p>
-                <p>{recommend.description}</p>
                 <Rating rating={recommend.rating} />
                 <RecommendCardActions>
                     <Button onClick={() => detailsRecommendHandle(recommend._id)}>Szczegóły</Button>

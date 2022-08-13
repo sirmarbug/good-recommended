@@ -3,9 +3,9 @@ import {Component} from "react";
 
 class SelectInput extends Component {
     render() {
-        const { name, children } = this.props
+        const { name, disabled, children } = this.props
         return (
-            <Field name={name} as="textarea" className="textarea-input">
+            <Field name={name} as="textarea" className="textarea-input" disabled={disabled}>
                 { children }
             </Field>
         )

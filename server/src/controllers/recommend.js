@@ -34,6 +34,29 @@ const getById = async (req, res) => {
     }
 }
 
+const getByType = async (req, res) => {
+    try {
+        const recommendType = req.params.type
+
+        if (!recommendType) {
+            return res.status(400).json({
+                error: {
+                    message: "Recommend type is required"
+                }
+            })
+        }
+
+        const recommends = await Recommend.find({ userId: req.user.userId, type: recommendType })
+
+        return res.status(200).json({
+            items: recommends,
+            total: recommends.length
+        })
+    } catch (e) {
+        return res.status(500).json(e)
+    }
+}
+
 const create = async (req, res) => {
     try {
         const { type, name, description, rating } = req.body
@@ -136,6 +159,7 @@ const remove = async (req, res) => {
 module.exports = {
     getAll,
     getById,
+    getByType,
     create,
     update,
     remove

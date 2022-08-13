@@ -11,7 +11,7 @@ import styled from "styled-components";
 import Subtitle from "../../components/typography/Subtitle";
 import TextareaInput from "../../components/forms/TextareaInput";
 import SelectInput from "../../components/forms/SelectInput";
-import {create} from "../../api/recommend";
+import {create, getById, updateRecommend} from "../../api/recommend";
 import {recommendValidationSchema} from "../../helpers/validations";
 
 const RecommendSaveWrapper = styled.div`
@@ -43,12 +43,24 @@ class RecommendSave extends Component {
         }
     }
 
+    componentDidMount = async () => {
+        const { id } = this.props.match.params
+
+        if (!id) {
+            return
+        }
+
+        const { data } = await getById(id)
+        this.setState({ form: data })
+    }
+
     submitHandle = async (values) => {
         const { id } = this.props.match.params
 
         try {
             if (id) {
-                console.log('update')
+                await updateRecommend(id, values)
+                this.props.history.push('/dashboard')
             } else {
                 await create(values)
                 this.props.history.push('/dashboard')
@@ -69,6 +81,7 @@ class RecommendSave extends Component {
                         <Subtitle>{ id ? 'Edytuj' : 'Dodaj' } rekomendację</Subtitle>
                         <Formik
                             initialValues={this.state.form}
+                            enableReinitialize
                             validationSchema={recommendValidationSchema}
                             onSubmit={this.submitHandle}
                         >

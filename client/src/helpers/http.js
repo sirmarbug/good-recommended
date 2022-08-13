@@ -43,6 +43,15 @@ export const post = async (uri, data) => {
     }
 }
 
+export const update = async (uri, data) => {
+    try {
+        const response = await http.put(uri, data)
+        return response
+    } catch (e) {
+        console.error(e)
+    }
+}
+
 export const remove = async (uri) => {
     try {
         const response = await http.delete(uri)

@@ -14,7 +14,6 @@ import MyErrorMessage from "../../components/forms/MyErrorMessage";
 
 class Register extends Component {
     registerHandle = async (values) => {
-        console.log('values', values)
         try {
             await register(values)
             this.props.history.push('/login')

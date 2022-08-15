@@ -8,6 +8,7 @@ import Series from "./pages/dashboard/Series";
 import Books from "./pages/dashboard/Books";
 import RecommendSave from "./pages/dashboard/RecommendSave";
 import RecommendDetails from "./pages/dashboard/RecommendDetails";
+import NotFound from "./pages/NotFound";
 
 const GuestRoute = ({ component: Component, ...rest }) => (
     <Route
@@ -64,6 +65,7 @@ class App extends Component {
                     <AuthRoute exact path="/recommend/details/:id" component={RecommendDetails}/>
                     <AuthRoute exact path="/recommend/new" component={RecommendSave}/>
                     <AuthRoute exact path="/recommend/:id/edit" component={RecommendSave}/>
+                    <Route path="*" component={NotFound}></Route>
                 </Switch>
             </div>
         </BrowserRouter>

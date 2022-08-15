@@ -28,6 +28,10 @@ const NavContentRight = styled.ul`
 `
 
 class DashboardLayoutNavigation extends Component{
+    logout = () => {
+        localStorage.removeItem('token')
+    }
+
     render() {
         return (
             <div>
@@ -51,7 +55,7 @@ class DashboardLayoutNavigation extends Component{
                                 <NavLink className="link" to="/recommend/new">Dodaj</NavLink>
                             </li>
                             <li>
-                                <NavLink className="link" to="/login">Wyloguj</NavLink>
+                                <NavLink className="link" to="/login" onClick={this.logout}>Wyloguj</NavLink>
                             </li>
                     </NavContentRight>
                 </Nav>
